@@ -8,9 +8,33 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.ridenearn.Home" >
 
-    <TextView
+    <ImageView
+        android:id="@+id/ridenearnlogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:src="@drawable/bike_logo" />
+
+    <Button
+        android:id="@+id/ridebtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ridenearnlogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:background="#33cc33"
+        android:text="Give a Ride" />
+
+    <Button
+        android:id="@+id/liftbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/ridebtn"
+        android:layout_below="@+id/ridebtn"
+        android:layout_marginTop="33dp"
+        android:background="#33cc33"
+        android:text="Take a Lift" />
 
 </RelativeLayout>
