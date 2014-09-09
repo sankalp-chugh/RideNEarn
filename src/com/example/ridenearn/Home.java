@@ -1,11 +1,20 @@
 package com.example.ridenearn;
 
-import android.support.v7.app.ActionBarActivity;
+import java.io.File;
+
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
 public class Home extends ActionBarActivity {
+	//preferences
+		private static final String PREFS_NAME = "registered";
+		private static final String PREF_EMAIL = "email";
+		
+		private String EmailValue;
 
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,4 +37,22 @@ public class Home extends ActionBarActivity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	private void loadPreferences() {
+		File f = new File(
+				"/data/data/com.example.ridenearn/shared_prefs/registered.xml");
+				if (f.exists())
+				    Log.d("TAG", "SharedPreferences registered : exist");
+				else{
+				    Intent i = new Intent(Home.this, Register.class);
+				    startActivity(i);
+				}
+				
+	}
+	
+	@Override
+	public void onResume() {
+	    super.onResume();
+	    loadPreferences();
+	     }
 }
