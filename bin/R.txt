@@ -258,13 +258,13 @@ int id activity_chooser_view_content 0x7f050025
 int id always 0x7f05000b
 int id avatar 0x7f050051
 int id beginning 0x7f050011
-int id bikebtn 0x7f050053
-int id bikebtn2 0x7f050059
+int id bikeradio 0x7f050053
+int id bikeradio2 0x7f050059
 int id button1 0x7f050050
 int id button2 0x7f050063
 int id button3 0x7f050064
-int id carbtn 0x7f050052
-int id carbtn2 0x7f050058
+int id carradio 0x7f050052
+int id carradio2 0x7f050058
 int id checkBox1 0x7f050056
 int id checkbox 0x7f05002d
 int id collapseActionView 0x7f05000d

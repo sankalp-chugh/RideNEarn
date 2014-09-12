@@ -1103,13 +1103,13 @@ containing a value of this type.
         public static final int always=0x7f05000b;
         public static final int avatar=0x7f050051;
         public static final int beginning=0x7f050011;
-        public static final int bikebtn=0x7f050053;
-        public static final int bikebtn2=0x7f050059;
+        public static final int bikeradio=0x7f050053;
+        public static final int bikeradio2=0x7f050059;
         public static final int button1=0x7f050050;
         public static final int button2=0x7f050063;
         public static final int button3=0x7f050064;
-        public static final int carbtn=0x7f050052;
-        public static final int carbtn2=0x7f050058;
+        public static final int carradio=0x7f050052;
+        public static final int carradio2=0x7f050058;
         public static final int checkBox1=0x7f050056;
         public static final int checkbox=0x7f05002d;
         public static final int collapseActionView=0x7f05000d;
