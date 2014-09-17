@@ -32,20 +32,13 @@ public class Register extends ActionBarActivity{
 	
 	public void doRegistration(View v){
 		String getEmail = email.getText().toString();
-		if(checkMail(getEmail)){
-			Intent i = new Intent(Register.this, ProfileEdit.class);
+		UserFunctions userFunc = new UserFunctions();
+		
+		if(userFunc.checkEmail(getEmail)){
+			Intent i = new Intent(Register.this, ProfileEdit.class).putExtra("email", getEmail);
 			startActivity(i);
 		}else
 			Toast.makeText(getApplicationContext(), "Invalid email Id", Toast.LENGTH_LONG).show();
-	}
-	
-	/**
-	 * Function to check valid college email id
-	 * @param str
-	 * @return
-	 */
-	private Boolean checkMail(String str){
-		return str.substring(str.indexOf("@")+1).equals("stu.upes.ac.in");
 	}
 	
 	private void savePreferences() {
@@ -62,8 +55,8 @@ public class Register extends ActionBarActivity{
 	@Override
 	public void onPause() {
 	    super.onPause();
-	    savePreferences();
-	    
+	    //savePreferences();
+	    finish();
 	}
 	
 }

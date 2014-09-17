@@ -37,6 +37,20 @@ public class UserFunctions {
     		return true;
     	return false;
     }
+    
+    public String[] getName(String email){
+	   	 
+	   	//Triming Email 
+	   	 String[] strArray = email.split("\\@");
+	   	 
+	   	//FullName
+	   	 String [] fullName = new String[1];
+	   	 fullName[0] = strArray[0];
+	   	  
+	   	fullName=fullName[0].split("\\.",2);
+	   	fullName[1]= fullName[1].replaceAll("\\d*$", "");
+	   	return fullName;
+    }
      
     /**
      * function make Login Request
@@ -65,7 +79,7 @@ public class UserFunctions {
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("tag", register_tag));
         params.add(new BasicNameValuePair("email", email));
-        params.add(new BasicNameValuePair("password", gender));
+        params.add(new BasicNameValuePair("gender", gender));
          
         // getting JSON Object
         JSONObject json = jsonParser.getJSONFromUrl(registerURL, params);
